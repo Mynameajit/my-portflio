@@ -8,6 +8,7 @@ import Experience from "./features/experience/Experience";
 import Contact from "./features/contact/Contact";
 import Navbar from "./components/Common/Navbar";
 import Skills from "./features/skills/Skills ";
+import Footer from "./components/Common/Footer";
 
 
 
@@ -30,6 +31,7 @@ const App = () => {
       <Projects />
       <Experience />
       <Contact />
+      <Footer />
     </main>
   );
 };

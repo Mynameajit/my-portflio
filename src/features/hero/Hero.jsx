@@ -37,17 +37,17 @@ const Hero = () => {
     <section
       id="home"
       className="
-        relative h-screen w-full overflow-hidden
-       
+        relative h-screen w-full overflow-hidden pt-10
+      lg:pt-20
       "
     >
       <ParticlesBackground />
 
-      <div className="relative z-10 flex h-full items-start justify-between px-5 lg:px-40">
+      <div className="relative z-10 flex h-full items-start justify-between  px-5 lg:px-40">
         {/* LEFT CONTENT */}
         <div
           className="
-            flex flex-col h-full pt-20 lg:pt-32 gap-5
+            flex flex-col h-full pt-20 lg:pt-22 gap-5
             max-w-xl
             text-center lg:text-left
           "
@@ -178,7 +178,7 @@ const Hero = () => {
             src={heroAvatar}
             alt="Hero Avatar"
             className="
-              h-[90%] object-contain select-none
+              h-[98%] object-contain select-none
               opacity-90
               dark:opacity-100
             "

@@ -47,7 +47,6 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, []);
 
-
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (!element) return;
@@ -68,7 +67,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300
+      className={`fixed top-0 z-999 w-full transition-all duration-300
       ${
         isScrolled
           ? "bg-background/70 backdrop-blur-md shadow-md"
@@ -78,13 +77,35 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-357.5 items-center justify-between px-4 py-3">
         {/* LOGO */}
         <div className="text-lg font-bold flex items-center gap-1">
-          <span className="text-pink-600 scale-125">{"{"}</span>
-          Ajit.dev
-          <span className="text-pink-600 scale-125">{"}"}</span>
+          <motion.span
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-pink-600 scale-125"
+          >
+            {"{"}
+          </motion.span>
+
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            Ajit.dev
+          </motion.span>
+
+          <motion.span
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-pink-600 scale-125"
+          >
+            {"}"}
+          </motion.span>
         </div>
 
         {/* DESKTOP NAV */}
-        <nav className="hidden md:flex items-center gap-9">
+        <nav className="hidden md:flex items-center gap-7">
           {navItems.map((item, i) => (
             <motion.button
               key={item.id}
@@ -110,19 +131,25 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           {/* THEME TOGGLE */}
           {theme === "dark" ? (
-            <button
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
               onClick={() => setTheme("light")}
               className="rounded-lg p-2 hover:bg-gray-900 transition"
             >
               <Sun className="h-5 w-5 text-pink-500" />
-            </button>
+            </motion.button>
           ) : (
-            <button
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
               onClick={() => setTheme("dark")}
               className="rounded-lg p-2 hover:bg-gray-100 transition"
             >
               <Moon className="h-5 w-5 text-pink-500" />
-            </button>
+            </motion.button>
           )}
 
           {/* HAMBURGER */}

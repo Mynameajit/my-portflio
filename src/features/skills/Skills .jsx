@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative min-h-screen w-full hero-bg flex flex-col items-center pt-10 gap-10"
+      className="relative  min-h-screen w-full hero-bg flex flex-col items-center pt-20 gap-10"
     >
       {/* Heading */}
       <motion.h1
