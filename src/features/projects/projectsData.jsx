@@ -1,5 +1,5 @@
 import swadmitra from "../../assets/SwadMitra.png";
-import slocker from "../../assets/sLocker.png";
+import slocker from "../../assets/SLocker.png";
 import MCABurger from "../../assets/MCA-Burger.png";
 import goals from "../../assets/goalsTracker.png";
 import chat from "../../assets/ChatApp.png";
